@@ -30,12 +30,14 @@ app.get('/webhook/', function (req, res) {
 
 app.post('/webhook/', function (req, res) {
 	messaging_events = req.body.entry[0].messaging
+	console.log(messaging_events);
 	for (i = 0; i < messaging_events.length; i++) {
 	    event = req.body.entry[0].messaging[i]
 	    sender = event.sender.id;
 
 	    if (event.message && event.message.text) {
 	    	text = event.message.text
+		console.log("Text: " + text);
 	        sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
 	    }
     }
@@ -57,6 +59,9 @@ function sendTextMessage(sender, text) {
 			message: messageData,
 		}
 	}, function(error, response, body) {
+		console.log(body);
+		console.log(response);
+
 		if (error) {
 			console.log('Error sending messages: ', error)
 		} else if (response.body.error) {
