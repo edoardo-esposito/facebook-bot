@@ -3,7 +3,8 @@ var bodyParser = require('body-parser')
 var request = require('request')
 var app = express()
 
-var fb_page_token = "CAADOMHoG70YBAIulwTUWmB5QUv430Kfg0CUIEAD8TZBSStRAUpoEPLuDz58rrUbR87bSMIEDlOBP1VyBZBEazTj9ZBnXaVxaWMpkeT8DddoCZBCZBhAO7QKcODBjihZA1juhaveaDa7rgREzLyrZCddZBucSZBwjfTbcwNRl9wsa4dcWNZCrZAL1zBXNk7d8UE1vGwZD";
+var fb_page_token = "CAADOMHoG70YBAJzbsoIRZAExczO6degnyMSCfriL1s5M234LynybVcal4tpJcus2TZAZCMEnqAbKC41g74Iprhlul4zz4qrtI6qsraL6H2COmDk04aoxR7WZAmnPZCFynLvv7JBGmddaUILN8Lv6NXjYbL13nmmZAkakQXpFeHW49iQTm9T3iMj4NhZBo2YnCoZD";
+
 var fb_verify_token = "jsfkfiwnfiwfwf283712";
 
 app.set('port', (process.env.PORT || 5000))
