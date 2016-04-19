@@ -32,8 +32,8 @@ app.post('/webhook/', function (req, res) {
 	    	text = event.message.text
 		console.log("Text: " + text);
 	
-	            if (text === 'prova') {
-	                sendGenericMessage(sender)
+	            if (text === 'volantino') {
+	                sendFlyers(sender)
 	                continue
 	            }
 
@@ -70,33 +70,29 @@ function sendTextMessage(sender, text) {
 	})
 }
 
-function sendGenericMessage(sender) {
+function sendFlyers(sender) {
     messageData = {
         "attachment": {
             "type": "template",
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "First card",
-                    "subtitle": "Element #1 of an hscroll",
-                    "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+                    "title": "Mediaworld",
+                    "subtitle": "Che la forza sia con te",
+                    "image_url": "http://www.doveconviene.it/images/volantini/big_285498.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.messenger.com",
-                        "title": "web url"
-                    }, {
-                        "type": "postback",
-                        "title": "Postback",
-                        "payload": "Payload for first element in a generic bubble",
+                        "url": "http://www.doveconviene.it/viewer/285498/1/cernusco-sul-naviglio",
+                        "title": "Sfoglia il volantino"
                     }],
                 }, {
-                    "title": "Second card",
-                    "subtitle": "Element #2 of an hscroll",
-                    "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
+                    "title": "Sky",
+                    "subtitle": "Offerte Sky & Fastweb",
+                    "image_url": "http://www.doveconviene.it/images/volantini/big_286833.jpg",
                     "buttons": [{
-                        "type": "postback",
-                        "title": "Postback",
-                        "payload": "Payload for second element in a generic bubble",
+                        "type": "web_url",
+                        "url": "http://www.doveconviene.it/viewer/286833/1/cernusco-sul-naviglio",
+                        "title": "Sfoglia il volantino"
                     }],
                 }]
             }
