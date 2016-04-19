@@ -16,6 +16,7 @@ app.use(bodyParser.json())
 
 // Index route
 app.get('/', function (req, res) {
+    console.log('Hello world, I am a chat bot')
     res.send('Hello world, I am a chat bot')
 })
 
